@@ -17,7 +17,8 @@ $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 # Internal/Organization: Download from internal location (internet sources are unreliable)
 $url        = 'https://assets.nagios.com/downloads/ncpa/ncpa-2.3.1.exe' # download url, HTTPS preferred
 #$url64      = '' # 64bit URL here (HTTPS preferred) or remove - if installer contains both (very rare), use $url
-#$silentArgs    = '/S /ALLUSERS'
+$silentArgs    = '/S /ALLUSERS'
+$validExitCodes= @(0, 3010, 1641)
 
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName

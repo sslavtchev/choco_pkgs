@@ -7,3 +7,5 @@
 # NOTE: For upgrades - like the uninstall script, this script always runs from 
 #  the currently installed version, not from the new upgraded package version.
 
+net stop ncpalistener
+net stop ncpapassive
